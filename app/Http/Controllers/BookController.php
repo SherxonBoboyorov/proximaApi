@@ -13,11 +13,9 @@ class BookController extends Controller
         return response()->json($books);
     }
 
-
     public function store(Request $request)
     {
         $book = new Books;
-
         $book->task = $request->task;
         $book->save();
 
